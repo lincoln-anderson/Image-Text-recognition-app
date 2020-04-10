@@ -18,6 +18,7 @@
 		01866E0223EDCE54000F1092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01866E0023EDCE54000F1092 /* LaunchScreen.storyboard */; };
 		01866E0D23EDCE54000F1092 /* Text_Image_Classifier_ASM_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866E0C23EDCE54000F1092 /* Text_Image_Classifier_ASM_Tests.swift */; };
 		01866E1823EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866E1723EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift */; };
+		01FE1F1E244103E1006E6AC2 /* circleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1F1D244103E1006E6AC2 /* circleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		01866E1323EDCE54000F1092 /* Text Image Classifier(ASM)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text Image Classifier(ASM)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01866E1723EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_Image_Classifier_ASM_UITests.swift; sourceTree = "<group>"; };
 		01866E1923EDCE54000F1092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01FE1F1D244103E1006E6AC2 /* circleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		01866DE623EDCE53000F1092 = {
 			isa = PBXGroup;
 			children = (
+				01FE1F1D244103E1006E6AC2 /* circleImage.swift */,
 				01866DF123EDCE53000F1092 /* Text Image Classifier(ASM) */,
 				01866E0B23EDCE54000F1092 /* Text Image Classifier(ASM)Tests */,
 				01866E1623EDCE54000F1092 /* Text Image Classifier(ASM)UITests */,
@@ -280,6 +283,7 @@
 				01866DF823EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld in Sources */,
 				0108CA2C240AE0A100E03033 /* AVCaptureSession.swift in Sources */,
 				01866DF323EDCE53000F1092 /* AppDelegate.swift in Sources */,
+				01FE1F1E244103E1006E6AC2 /* circleImage.swift in Sources */,
 				01866DFA23EDCE53000F1092 /* ContentView.swift in Sources */,
 				01866DF523EDCE53000F1092 /* SceneDelegate.swift in Sources */,
 			);

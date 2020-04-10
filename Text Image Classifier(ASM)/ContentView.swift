@@ -10,7 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            
+            
+            VStack(alignment: .leading) {
+                offset(x: 10, y: 10)
+                Text("Text Recognition")
+                    .font(.title)
+                    .foregroundColor(.black)
+                HStack {
+                    Text("Machine Learning Project")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("LAVA")
+                        .font(.subheadline)
+                }
+                
+            }
+            .padding()
+            
+            circleImage()
+        }
+            
     }
 }
 
