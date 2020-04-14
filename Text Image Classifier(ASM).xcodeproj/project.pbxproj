@@ -16,6 +16,8 @@
 		01866E0223EDCE54000F1092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01866E0023EDCE54000F1092 /* LaunchScreen.storyboard */; };
 		01866E0D23EDCE54000F1092 /* Text_Image_Classifier_ASM_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866E0C23EDCE54000F1092 /* Text_Image_Classifier_ASM_Tests.swift */; };
 		01866E1823EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866E1723EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift */; };
+		01EAC9FE24463F9D0013FD8E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */; };
+		01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */; };
 		01FE1F1E244103E1006E6AC2 /* circleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1F1D244103E1006E6AC2 /* circleImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		01866E1323EDCE54000F1092 /* Text Image Classifier(ASM)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text Image Classifier(ASM)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01866E1723EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_Image_Classifier_ASM_UITests.swift; sourceTree = "<group>"; };
 		01866E1923EDCE54000F1092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaptureView.swift; sourceTree = "<group>"; };
 		01FE1F1D244103E1006E6AC2 /* circleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,8 @@
 				01866DF223EDCE53000F1092 /* AppDelegate.swift */,
 				01866DF423EDCE53000F1092 /* SceneDelegate.swift */,
 				01866DF923EDCE53000F1092 /* ContentView.swift */,
+				01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */,
+				01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */,
 				01866DFB23EDCE54000F1092 /* Assets.xcassets */,
 				01866E0023EDCE54000F1092 /* LaunchScreen.storyboard */,
 				01866E0323EDCE54000F1092 /* Info.plist */,
@@ -274,8 +280,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				01866DF823EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld in Sources */,
+				01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */,
 				01866DF323EDCE53000F1092 /* AppDelegate.swift in Sources */,
 				01FE1F1E244103E1006E6AC2 /* circleImage.swift in Sources */,
+				01EAC9FE24463F9D0013FD8E /* ImagePicker.swift in Sources */,
 				01866DFA23EDCE53000F1092 /* ContentView.swift in Sources */,
 				01866DF523EDCE53000F1092 /* SceneDelegate.swift in Sources */,
 			);

@@ -9,6 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showImagePicker: Bool = false
+    
+    @State private var image: Image? = nil
+    
     var body: some View {
         VStack {
             
@@ -28,7 +33,7 @@ struct ContentView: View {
             
             Button(action: {
                 
-                print("clicked Button")
+                self.showImagePicker = true
                 
             }) {
                 
@@ -49,6 +54,10 @@ struct ContentView: View {
                 
             }
             
+            
+        }.sheet(isPresented: self.$showImagePicker) {
+            
+            ImageCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
             
         }
             
