@@ -12,8 +12,7 @@ struct circleImage: View {
     var body: some View {
         Image("Helvetica").resizable()
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color.white, lineWidth: 4))
-        .shadow(radius: 10)
+            .overlay(Circle().stroke(Color.blue, lineWidth: 4))
         .scaledToFit()
         
         
