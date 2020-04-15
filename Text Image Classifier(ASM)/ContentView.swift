@@ -69,13 +69,13 @@ struct ContentView: View {
                     Text("Open Camera")
                     .fontWeight(.bold)
                     .font(.title)
-                    .padding()
+                    .padding(30)
                     .background(Color(hex: "242628"))
-                    .cornerRadius(40)
+                    .cornerRadius(50)
                         .foregroundColor(Color(hex: "000"))
                     .padding(10)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 40)
+                        RoundedRectangle(cornerRadius: 50)
                             .stroke(Color(hex: "242628"), lineWidth: 5)
                     )
                     
