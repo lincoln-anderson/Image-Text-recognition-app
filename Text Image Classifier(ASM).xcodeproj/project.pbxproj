@@ -10,17 +10,19 @@
 		01866DF323EDCE53000F1092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF223EDCE53000F1092 /* AppDelegate.swift */; };
 		01866DF523EDCE53000F1092 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF423EDCE53000F1092 /* SceneDelegate.swift */; };
 		01866DF823EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF623EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld */; };
-		01866DFA23EDCE53000F1092 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF923EDCE53000F1092 /* ContentView.swift */; };
 		01866DFC23EDCE54000F1092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01866DFB23EDCE54000F1092 /* Assets.xcassets */; };
 		01866DFF23EDCE54000F1092 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01866DFE23EDCE54000F1092 /* Preview Assets.xcassets */; };
 		01866E0223EDCE54000F1092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01866E0023EDCE54000F1092 /* LaunchScreen.storyboard */; };
 		01866E0D23EDCE54000F1092 /* Text_Image_Classifier_ASM_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866E0C23EDCE54000F1092 /* Text_Image_Classifier_ASM_Tests.swift */; };
 		01866E1823EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866E1723EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift */; };
+		0193507A2447927300AF2805 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF923EDCE53000F1092 /* ContentView.swift */; };
+		0193507E24479C9800AF2805 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF923EDCE53000F1092 /* ContentView.swift */; };
+		0193507F24479C9900AF2805 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF923EDCE53000F1092 /* ContentView.swift */; };
+		0193508124479FF600AF2805 /* UIHexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0193508024479FF600AF2805 /* UIHexColor.swift */; };
 		01EAC9FE24463F9D0013FD8E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */; };
 		01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */; };
 		01EACA032446571D0013FD8E /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 01EACA022446571D0013FD8E /* VideoPlayer */; };
 		01EACA0524465DD60013FD8E /* typing.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 01EACA0424465DD60013FD8E /* typing.mp4 */; };
-		01FE1F1E244103E1006E6AC2 /* circleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FE1F1D244103E1006E6AC2 /* circleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +58,10 @@
 		01866E1323EDCE54000F1092 /* Text Image Classifier(ASM)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text Image Classifier(ASM)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01866E1723EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_Image_Classifier_ASM_UITests.swift; sourceTree = "<group>"; };
 		01866E1923EDCE54000F1092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0193508024479FF600AF2805 /* UIHexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHexColor.swift; sourceTree = "<group>"; };
 		01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaptureView.swift; sourceTree = "<group>"; };
 		01EACA0424465DD60013FD8E /* typing.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = typing.mp4; path = ../../../../typing.mp4; sourceTree = "<group>"; };
-		01FE1F1D244103E1006E6AC2 /* circleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,6 @@
 		01866DE623EDCE53000F1092 = {
 			isa = PBXGroup;
 			children = (
-				01FE1F1D244103E1006E6AC2 /* circleImage.swift */,
 				01866DF123EDCE53000F1092 /* Text Image Classifier(ASM) */,
 				01866E0B23EDCE54000F1092 /* Text Image Classifier(ASM)Tests */,
 				01866E1623EDCE54000F1092 /* Text Image Classifier(ASM)UITests */,
@@ -115,6 +116,7 @@
 				01866DF223EDCE53000F1092 /* AppDelegate.swift */,
 				01866DF423EDCE53000F1092 /* SceneDelegate.swift */,
 				01866DF923EDCE53000F1092 /* ContentView.swift */,
+				0193508024479FF600AF2805 /* UIHexColor.swift */,
 				01EACA0424465DD60013FD8E /* typing.mp4 */,
 				01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */,
 				01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */,
@@ -293,10 +295,10 @@
 			files = (
 				01866DF823EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld in Sources */,
 				01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */,
+				0193507A2447927300AF2805 /* ContentView.swift in Sources */,
 				01866DF323EDCE53000F1092 /* AppDelegate.swift in Sources */,
-				01FE1F1E244103E1006E6AC2 /* circleImage.swift in Sources */,
 				01EAC9FE24463F9D0013FD8E /* ImagePicker.swift in Sources */,
-				01866DFA23EDCE53000F1092 /* ContentView.swift in Sources */,
+				0193508124479FF600AF2805 /* UIHexColor.swift in Sources */,
 				01866DF523EDCE53000F1092 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0193507E24479C9800AF2805 /* ContentView.swift in Sources */,
 				01866E0D23EDCE54000F1092 /* Text_Image_Classifier_ASM_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0193507F24479C9900AF2805 /* ContentView.swift in Sources */,
 				01866E1823EDCE54000F1092 /* Text_Image_Classifier_ASM_UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
