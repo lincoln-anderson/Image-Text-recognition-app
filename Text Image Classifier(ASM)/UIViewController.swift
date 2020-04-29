@@ -16,6 +16,12 @@ struct PageViewController: UIViewControllerRepresentable {
     
     var controllers: [UIViewController]
     
+    func makeCoordinator() -> Coordinator {
+        
+        Coordinator(self)
+        
+    }
+    
     func makeUIViewController(context: Context) -> UIPageViewController {
         
         let PageViewController = UIPageViewController (
@@ -36,6 +42,21 @@ struct PageViewController: UIViewControllerRepresentable {
             [controllers[0]], direction: .forward, animated: true)
         
     }
+    
+    class Coordinator: NSObject {
+        
+        var parent: PageViewController
+        
+        init(_ pageViewController: PageViewController) {
+            
+            self.parent = pageViewController
+            
+        }
+        
+        
+    }
+    
+    
     
     
 }
