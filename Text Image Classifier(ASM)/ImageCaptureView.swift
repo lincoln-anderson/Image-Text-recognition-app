@@ -7,34 +7,75 @@
 //
 
 import SwiftUI
+import UIKit
+import VisionKit
+import Combine
 
-struct ImageCaptureView {
-    /// MARK: - Properties
-    @Binding var isShown: Bool
-    @Binding var image: Image?
-
-    func makeCoordinator() -> ImagePickerCoordinator {
-      return ImagePickerCoordinator(isShown: $isShown, image: $image)
-    }
-}
-
-extension ImageCaptureView: UIViewControllerRepresentable {
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImageCaptureView>) -> UIImagePickerController {
-        let picker = UIImagePickerController()
-        picker.delegate = context.coordinator
+struct ImageCaptureView: UIViewControllerRepresentable {
+    
+    @Binding var scannedText: String
+    
+    typealias UIViewControllerType = VNDocumentCameraViewController
+    
+    func makeCoordinator() -> Coordinator {
         
+        return Coordinator(scannedText: $scannedText)
         
-        return picker
     }
     
-    func updateUIViewController(_ uiViewController: UIImagePickerController,
-                                context: UIViewControllerRepresentableContext<ImageCaptureView>) {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImageCaptureView>) -> VNDocumentCameraViewController {
+        
+        let documentCameraViewController = VNDocumentCameraViewController()
+        
+        documentCameraViewController.delegate = context.coordinator
+        
+        return documentCameraViewController
         
     }
-}
-
-struct ImageCaptureView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: UIViewControllerRepresentableContext<ImageCaptureView>) {
+        
+        
+        
     }
+    
+    class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
+        
+        var scannedText: Binding<String>
+        
+        private let textRecognizer: TextRecognizer
+        
+        init(scannedText: Binding<String>) {
+            
+            self.scannedText = scannedText
+            
+            textRecognizer = TextRecognizer(scannedText: scannedText)
+            
+        }
+        
+        public func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+            
+            var images = [CGImage]()
+            
+            for pageIndex in 0 ..< scan.pageCount {
+                
+                let image = scan.imageOfPage(at: pageIndex)
+                
+                if let cgImage = image.cgImage {
+                    
+                    images.append(cgImage)
+                    
+                }
+            }
+            
+            textRecognizer.recognizeText(from: images)
+            
+            controller.navigationController?.popViewController(animated: true)
+            
+        }
+        
+    }
+    
+    
+    
 }

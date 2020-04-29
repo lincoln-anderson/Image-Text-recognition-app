@@ -7,27 +7,29 @@
 //
 
 import Foundation
+import SwiftUI
 import UIKit
 import Vision
 import VisionKit
+import Combine
 
-class TextRecognizer {
+public struct TextRecognizer {
     
-    //requests to be performed on the selectd image
-    
-    private var requests = [VNRequest]()
+    @Binding var recognizedText: String
     
     private let textRecognitionWorkQueue = DispatchQueue(label: "TextRecognitionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
-    private var resultingText = ""
-    
-    private func setupVision() {
+    func recognizeText(from images: [CGImage]) {
+        
+        self.recognizedText = ""
+        
+        var tmp = ""
         
         let textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
             
             guard let observations = request.results as? [VNRecognizedTextObservation] else {
                 
-                print("the observations are of an unexpected type")
+                print("The observations are of an unexpected type")
                 
                 return
                 
@@ -37,28 +39,35 @@ class TextRecognizer {
             
             for observation in observations {
                 
-                guard let candidate = observation.topCandidates(maximumCandidates).first else {continue}
+                guard let candidate = observation.topCandidates(maximumCandidates).first else { continue }
                 
-                self.resultingText += candidate.string + "\n"
+                tmp += candidate.string + "\n"
                 
             }
         }
         
         textRecognitionRequest.recognitionLevel = .accurate
         
-        self.requests = [textRecognitionRequest]
+        for image in images {
+            
+            let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
+            
+            do {
+                
+                try requestHandler.perform([textRecognitionRequest])
+                
+            } catch {
+                
+                print(error)
+                
+            }
+            
+            tmp += "\n\n"
+            
+        }
         
-    }
-    
-    
-    
-}
-
-extension TextRecognizer: VNDocumentCameraViewControllerDelegate {
-    
-    public func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        self.recognizedText = tmp
         
-        text
         
     }
     

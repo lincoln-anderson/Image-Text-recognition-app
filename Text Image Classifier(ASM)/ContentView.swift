@@ -16,15 +16,10 @@ private let videoURL = Bundle.main.url(forResource: "typing", withExtension: "mp
 
 struct ContentView: View {
     
-    @State private var showImagePicker: Bool = false
-    
-    @State private var image: Image? = nil
+    @ObservedObject var scannedText: ScannedText = ScannedText()
     
     @State private var play: Bool = true
     
-    @State private var textView: UITextView!
-    
-    @State private var activityIndicator: UIActivityIndicatorView!
     
     var body: some View {
         
