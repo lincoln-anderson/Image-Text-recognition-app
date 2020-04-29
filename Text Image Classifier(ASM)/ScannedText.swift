@@ -13,7 +13,7 @@ class ScannedText: ObservableObject, Identifiable {
     
     let objectWillChange = PassthroughSubject<ScannedText, Never>()
     
-    var text: String = "Scan document to save the text" {
+    var text: String = "" {
         
         willSet {
             

@@ -23,84 +23,47 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView {
         
-            ZStack{
-                Color(hex: "000")
-                    .edgesIgnoringSafeArea(.all)
+        NavigationView {
+            
+            VStack{
                 
-                VStack {
-
+                VideoPlayer(url: videoURL!, play: $play)
+                .autoReplay(true)
+                
+                Text(scannedText.text)
+                    .lineLimit(nil)
+                
+                Spacer()
+                
+                NavigationLink(destination: ImageCaptureView(scannedText: $scannedText.text)) {
                     
-                    VideoPlayer(url: videoURL!, play: $play)
-                        .autoReplay(true)
+                    Text("Scan for text")
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .padding(30)
+                    .background(Color(hex: "242628"))
+                    .cornerRadius(50)
+                        .foregroundColor(Color(hex: "000"))
+                    .padding(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 50)
+                            .stroke(Color(hex: "242628"), lineWidth: 5)
                     
-                    Button(action: {
-                    
-                        self.showImagePicker.toggle()
-                        
-                    }) {
-                        
-                        Text("Pick Image")
-                        .fontWeight(.bold)
-                        .font(.title)
-                        .padding(30)
-                        .background(Color(hex: "242628"))
-                        .cornerRadius(50)
-                            .foregroundColor(Color(hex: "000"))
-                        .padding(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 50)
-                                .stroke(Color(hex: "242628"), lineWidth: 5)
-                        )
-                        
-                        
-                        
-                        
-                    }
-                    
-                    Spacer(minLength: 40)
-                    
-                    NavigationLink(destination: ImageTextView(image: $image)) {
-                        
-                        Text("Scan for text")
-                        .fontWeight(.bold)
-                        .font(.title)
-                        .padding(30)
-                        .background(Color(hex: "242628"))
-                        .cornerRadius(50)
-                            .foregroundColor(Color(hex: "000"))
-                        .padding(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 50)
-                                .stroke(Color(hex: "242628"), lineWidth: 5)
-                        )
-                        
-                        
-                        
-                    }
-                    
-                    if ((image) != nil) {
-                        
-                        
-                        
-                    }
-                    
-                    Spacer()
-                    
+                    )
                     
                 }
-                if(showImagePicker) {
-                    
-                    ImageCaptureView(isShown: self.$showImagePicker, image: self.$image)
                 
-                }
                 
             }
-        
+            Color(hex: "000")
+            .edgesIgnoringSafeArea(.all)
         }
         
+        
     }
+        
+            
             
 }
 

@@ -15,13 +15,13 @@ import Combine
 
 public struct TextRecognizer {
     
-    @Binding var recognizedText: String
+    @Binding var scannedText: String
     
     private let textRecognitionWorkQueue = DispatchQueue(label: "TextRecognitionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
     func recognizeText(from images: [CGImage]) {
         
-        self.recognizedText = ""
+        self.scannedText = ""
         
         var tmp = ""
         
@@ -66,7 +66,7 @@ public struct TextRecognizer {
             
         }
         
-        self.recognizedText = tmp
+        self.scannedText = tmp
         
         
     }
