@@ -22,6 +22,10 @@ struct ContentView: View {
     
     @State private var play: Bool = true
     
+    @State private var textView: UITextView!
+    
+    @State private var activityIndicator: UIActivityIndicatorView!
+    
     var body: some View {
         
         ZStack{
