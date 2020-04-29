@@ -28,53 +28,82 @@ struct ContentView: View {
     
     var body: some View {
         
-        ZStack{
-            Color(hex: "000")
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
+        NavigationView {
+        
+            ZStack{
+                Color(hex: "000")
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
 
-                
-                VideoPlayer(url: videoURL!, play: $play)
-                    .autoReplay(true)
-                
-                Button(action: {
                     
-                    self.showImagePicker.toggle()
+                    VideoPlayer(url: videoURL!, play: $play)
+                        .autoReplay(true)
                     
-                }) {
+                    Button(action: {
                     
-                    Text("Open Camera")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding(30)
-                    .background(Color(hex: "242628"))
-                    .cornerRadius(50)
-                        .foregroundColor(Color(hex: "000"))
-                    .padding(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 50)
-                            .stroke(Color(hex: "242628"), lineWidth: 5)
-                    )
+                        self.showImagePicker.toggle()
+                        
+                    }) {
+                        
+                        Text("Pick Image")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding(30)
+                        .background(Color(hex: "242628"))
+                        .cornerRadius(50)
+                            .foregroundColor(Color(hex: "000"))
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 50)
+                                .stroke(Color(hex: "242628"), lineWidth: 5)
+                        )
+                        
+                        
+                        
+                        
+                    }
                     
+                    Spacer(minLength: 40)
+                    
+                    NavigationLink(destination: ImageTextView(image: $image)) {
+                        
+                        Text("Scan for text")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding(30)
+                        .background(Color(hex: "242628"))
+                        .cornerRadius(50)
+                            .foregroundColor(Color(hex: "000"))
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 50)
+                                .stroke(Color(hex: "242628"), lineWidth: 5)
+                        )
+                        
+                        
+                        
+                    }
+                    
+                    if ((image) != nil) {
+                        
+                        
+                        
+                    }
+                    
+                    Spacer()
                     
                     
                 }
+                if(showImagePicker) {
+                    
+                    ImageCaptureView(isShown: self.$showImagePicker, image: self.$image)
                 
-                image?.resizable()
-                
-                Spacer()
-                
+                }
                 
             }
-            if(showImagePicker) {
-                
-                ImageCaptureView(isShown: self.$showImagePicker, image: self.$image)
-            
-            }
-            
-        }
         
+        }
         
     }
             
