@@ -8,11 +8,19 @@
 
 import SwiftUI
 
+struct MultiTextView: UIViewRepresentable {
+    
+    
+    @Binding var text: String
+    
+    
+}
+
 struct ImageTextView: View {
     
     @Binding var image: Image?
     
     var body: some View {
-        self.image?.resizable()
+        UITextView.text = "hello"
     }
 }

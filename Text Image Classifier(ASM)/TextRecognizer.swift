@@ -53,3 +53,15 @@ class TextRecognizer {
     
     
 }
+
+extension TextRecognizer: VNDocumentCameraViewControllerDelegate {
+    
+    public func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        
+        text
+        
+    }
+    
+    
+    
+}

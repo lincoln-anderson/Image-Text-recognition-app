@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01135247245A051C00468877 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01135246245A051C00468877 /* ImageTextView.swift */; };
 		01135249245A09A000468877 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01135248245A09A000468877 /* TextRecognizer.swift */; };
+		0113524B245A167900468877 /* ScannedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113524A245A167900468877 /* ScannedText.swift */; };
 		01866DF323EDCE53000F1092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF223EDCE53000F1092 /* AppDelegate.swift */; };
 		01866DF523EDCE53000F1092 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF423EDCE53000F1092 /* SceneDelegate.swift */; };
 		01866DF823EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01866DF623EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		01135246245A051C00468877 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		01135248245A09A000468877 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
+		0113524A245A167900468877 /* ScannedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedText.swift; sourceTree = "<group>"; };
 		01866DEF23EDCE53000F1092 /* Text Image Classifier(ASM).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Image Classifier(ASM).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01866DF223EDCE53000F1092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01866DF423EDCE53000F1092 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				01866DF423EDCE53000F1092 /* SceneDelegate.swift */,
 				01866DF923EDCE53000F1092 /* ContentView.swift */,
 				01135246245A051C00468877 /* ImageTextView.swift */,
+				0113524A245A167900468877 /* ScannedText.swift */,
 				01135248245A09A000468877 /* TextRecognizer.swift */,
 				0193508024479FF600AF2805 /* UIHexColor.swift */,
 				01EACA0424465DD60013FD8E /* typing.mp4 */,
@@ -308,6 +311,7 @@
 				0193508124479FF600AF2805 /* UIHexColor.swift in Sources */,
 				01135249245A09A000468877 /* TextRecognizer.swift in Sources */,
 				01866DF523EDCE53000F1092 /* SceneDelegate.swift in Sources */,
+				0113524B245A167900468877 /* ScannedText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
