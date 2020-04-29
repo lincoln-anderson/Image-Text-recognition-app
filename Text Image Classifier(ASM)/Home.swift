@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  Home.swift
 //  Text Image Classifier(ASM)
 //
-//  Created by lincoln anderson on 2/7/20.
+//  Created by lincoln anderson on 4/29/20.
 //  Copyright © 2020 lincoln anderson. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ import VideoPlayer
 private let videoURL = Bundle.main.url(forResource: "typing", withExtension: "mp4")
 
 
-struct ContentView: View {
+struct CategoryHome: View {
     
     @State private var showImagePicker: Bool = false
     
@@ -77,10 +77,9 @@ struct ContentView: View {
         
         
     }
-            
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Home_Previews: PreviewProvider {
     static var previews: some View {
         CategoryHome()
     }

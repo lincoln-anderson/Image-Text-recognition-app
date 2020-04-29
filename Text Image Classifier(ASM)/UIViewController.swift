@@ -16,7 +16,26 @@ struct PageViewController: UIViewControllerRepresentable {
     
     var controllers: [UIViewController]
     
-//    func makeUIViewController
+    func makeUIViewController(context: Context) -> UIPageViewController {
+        
+        let PageViewController = UIPageViewController (
+            
+            transitionStyle: .scroll,
+            
+            navigationOrientation: .horizontal)
+            
+        return PageViewController
+        
+        
+    }
+    
+    func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
+        
+        pageViewController.setViewControllers(
+            
+            [controllers[0]], direction: .forward, animated: true)
+        
+    }
     
     
 }
