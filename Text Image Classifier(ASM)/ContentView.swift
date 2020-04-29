@@ -36,7 +36,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     
-                    self.showImagePicker = true
+                    self.showImagePicker.toggle()
                     
                 }) {
                     
@@ -57,12 +57,15 @@ struct ContentView: View {
                     
                 }
                 
+                image?.resizable()
+                
                 Spacer()
                 
                 
-            }.sheet(isPresented: self.$showImagePicker) {
+            }
+            if(showImagePicker) {
                 
-                ImageCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
+                ImageCaptureView(isShown: self.$showImagePicker, image: self.$image)
             
             }
             

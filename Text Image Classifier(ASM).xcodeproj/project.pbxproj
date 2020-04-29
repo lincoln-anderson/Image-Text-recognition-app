@@ -23,6 +23,7 @@
 		01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */; };
 		01EACA032446571D0013FD8E /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 01EACA022446571D0013FD8E /* VideoPlayer */; };
 		01EACA0524465DD60013FD8E /* typing.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 01EACA0424465DD60013FD8E /* typing.mp4 */; };
+		01FC011F2459BFB1000F830C /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC011E2459BFB1000F830C /* UITextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaptureView.swift; sourceTree = "<group>"; };
 		01EACA0424465DD60013FD8E /* typing.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = typing.mp4; path = ../../../../typing.mp4; sourceTree = "<group>"; };
+		01FC011E2459BFB1000F830C /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				01866DF223EDCE53000F1092 /* AppDelegate.swift */,
 				01866DF423EDCE53000F1092 /* SceneDelegate.swift */,
 				01866DF923EDCE53000F1092 /* ContentView.swift */,
+				01FC011E2459BFB1000F830C /* UITextView.swift */,
 				0193508024479FF600AF2805 /* UIHexColor.swift */,
 				01EACA0424465DD60013FD8E /* typing.mp4 */,
 				01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */,
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01866DF823EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld in Sources */,
+				01FC011F2459BFB1000F830C /* UITextView.swift in Sources */,
 				01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */,
 				0193507A2447927300AF2805 /* ContentView.swift in Sources */,
 				01866DF323EDCE53000F1092 /* AppDelegate.swift in Sources */,

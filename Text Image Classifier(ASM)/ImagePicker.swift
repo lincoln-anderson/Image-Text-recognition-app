@@ -10,25 +10,18 @@ import Foundation
 import SwiftUI
 
 class ImagePickerCoordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+@Binding var isShown: Bool
+@Binding var image: Image?
+init(isShown: Binding<Bool>, image: Binding<Image?>) {
+  _isShown = isShown
+  _image = image
+}
     
-    @Binding var isShown: Bool
-    @Binding var image: Image?
-    
-    init(isShown: Binding<Bool>, image: Binding<Image?>) {
-        
-        _isShown = isShown
-        _image = image
-        
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        let imageFromUI = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        
-        image = Image(uiImage: imageFromUI)
-        
-        isShown = false
-        
+    func imagePickerController(_ picker: UIImagePickerController,
+                  didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+       guard let unwrapImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+       image = Image(uiImage: unwrapImage)
+       isShown = false
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -40,30 +33,14 @@ class ImagePickerCoordinator: NSObject, UINavigationControllerDelegate, UIImageP
     
 }
 
-struct ImagePicker: UIViewControllerRepresentable {
+struct ImagePicker {
     
     @Binding var isShown: Bool
     @Binding var image: Image?
     
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
-    
-    }
-    
     func makeCoordinator() -> ImagePickerCoordinator {
         
         return ImagePickerCoordinator(isShown: $isShown, image: $image)
-        
-    }
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-        
-        let picker = UIImagePickerController()
-        
-        picker.delegate = context.coordinator
-        
-        //picker.sourceType = .camera
-        
-        return picker
         
     }
     

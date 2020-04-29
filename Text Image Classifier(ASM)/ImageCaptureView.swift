@@ -8,19 +8,33 @@
 
 import SwiftUI
 
-struct ImageCaptureView: View {
-    
-    @Binding var showImagePicker: Bool
+struct ImageCaptureView {
+    /// MARK: - Properties
+    @Binding var isShown: Bool
     @Binding var image: Image?
+
+    func makeCoordinator() -> ImagePickerCoordinator {
+      return ImagePickerCoordinator(isShown: $isShown, image: $image)
+    }
+}
+
+extension ImageCaptureView: UIViewControllerRepresentable {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImageCaptureView>) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
+        
+        
+        return picker
+    }
     
-    
-    var body: some View {
-        ImagePicker(isShown: $showImagePicker, image: $image)
+    func updateUIViewController(_ uiViewController: UIImagePickerController,
+                                context: UIViewControllerRepresentableContext<ImageCaptureView>) {
+        
     }
 }
 
 struct ImageCaptureView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageCaptureView(showImagePicker: .constant(false), image: .constant(Image("")))
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
