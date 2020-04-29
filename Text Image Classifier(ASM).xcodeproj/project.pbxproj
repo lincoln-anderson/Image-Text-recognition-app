@@ -20,8 +20,6 @@
 		01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */; };
 		01EACA032446571D0013FD8E /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 01EACA022446571D0013FD8E /* VideoPlayer */; };
 		01EACA0524465DD60013FD8E /* typing.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 01EACA0424465DD60013FD8E /* typing.mp4 */; };
-		01FC011F2459BFB1000F830C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC011E2459BFB1000F830C /* UIViewController.swift */; };
-		01FC01212459C4BC000F830C /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC01202459C4BC000F830C /* PageView.swift */; };
 		01FC01232459C6B4000F830C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC01222459C6B4000F830C /* Home.swift */; };
 		01FC01252459CB5E000F830C /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC01242459CB5E000F830C /* ImageTextView.swift */; };
 		01FC01272459CD21000F830C /* ImageTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC01262459CD21000F830C /* ImageTextController.swift */; };
@@ -63,8 +61,6 @@
 		01EAC9FD24463F9D0013FD8E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		01EAC9FF2446441F0013FD8E /* ImageCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaptureView.swift; sourceTree = "<group>"; };
 		01EACA0424465DD60013FD8E /* typing.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = typing.mp4; path = ../../../../typing.mp4; sourceTree = "<group>"; };
-		01FC011E2459BFB1000F830C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		01FC01202459C4BC000F830C /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		01FC01222459C6B4000F830C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		01FC01242459CB5E000F830C /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		01FC01262459CD21000F830C /* ImageTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextController.swift; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 				01866DF223EDCE53000F1092 /* AppDelegate.swift */,
 				01866DF423EDCE53000F1092 /* SceneDelegate.swift */,
 				01FC01242459CB5E000F830C /* ImageTextView.swift */,
-				01FC011E2459BFB1000F830C /* UIViewController.swift */,
-				01FC01202459C4BC000F830C /* PageView.swift */,
 				01FC01222459C6B4000F830C /* Home.swift */,
 				0193508024479FF600AF2805 /* UIHexColor.swift */,
 				01EACA0424465DD60013FD8E /* typing.mp4 */,
@@ -304,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01866DF823EDCE53000F1092 /* Text_Image_Classifier_ASM_.xcdatamodeld in Sources */,
-				01FC011F2459BFB1000F830C /* UIViewController.swift in Sources */,
 				01FC01232459C6B4000F830C /* Home.swift in Sources */,
 				01EACA002446441F0013FD8E /* ImageCaptureView.swift in Sources */,
 				01866DF323EDCE53000F1092 /* AppDelegate.swift in Sources */,
@@ -312,7 +305,6 @@
 				01EAC9FE24463F9D0013FD8E /* ImagePicker.swift in Sources */,
 				0193508124479FF600AF2805 /* UIHexColor.swift in Sources */,
 				01FC01272459CD21000F830C /* ImageTextController.swift in Sources */,
-				01FC01212459C4BC000F830C /* PageView.swift in Sources */,
 				01866DF523EDCE53000F1092 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,8 @@ struct PageView<Page: View>: View {
     
     var viewControllers: [UIHostingController<Page>]
     
+    @State var currentPage = 0
+    
     init(_ views: [Page]) {
         
         self.viewControllers = views.map {UIHostingController(rootView: $0)}
@@ -21,13 +23,16 @@ struct PageView<Page: View>: View {
     
     var body: some View {
         
-        PageViewController(controllers: viewControllers)
+        VStack {
+            PageViewController(controllers: viewControllers, currentPage: $currentPage)
+            Text("Current page: \(currentPage)")
+        }
         
     }
 }
 
-//struct PageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PageView(features.map {VideoPlayer(url: videoURL!, play: true)})
-//    }
-//}
+struct PageView_Previews: PreviewProvider {
+    static var previews: some View {
+        PageView(CategoryHome)
+    }
+}

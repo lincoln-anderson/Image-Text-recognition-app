@@ -58,7 +58,7 @@ class ImageTextController {
     
     private func scanReceipts(_ sender: UIControl?) {
         
-        let docum
+//        let docum
         
         
     }
