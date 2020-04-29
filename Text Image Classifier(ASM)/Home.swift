@@ -42,6 +42,8 @@ struct CategoryHome: View {
                     
                     self.showImagePicker.toggle()
                     
+                    NavigationLink(destination: ImageTextView()
+                    
                 }) {
                     
                     Text("Open Camera")
