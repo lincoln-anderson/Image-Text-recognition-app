@@ -70,6 +70,8 @@ struct ImageCaptureView: UIViewControllerRepresentable {
             
             textRecognizer.recognizeText(from: images)
             
+            
+            
             controller.navigationController?.popViewController(animated: true)
             
         }

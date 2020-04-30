@@ -25,6 +25,8 @@ public struct TextRecognizer {
         
         var tmp = ""
         
+        
+        
         let textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
             
             guard let observations = request.results as? [VNRecognizedTextObservation] else {

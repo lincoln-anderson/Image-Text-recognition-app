@@ -20,6 +20,8 @@ struct ContentView: View {
     
     @State private var play: Bool = true
     
+    @State public var showVideo: Bool = true
+    
     
     var body: some View {
         
@@ -28,8 +30,22 @@ struct ContentView: View {
             
             VStack{
                 
-                VideoPlayer(url: videoURL!, play: $play)
-                .autoReplay(true)
+                
+                if self.showVideo {
+                    VideoPlayer(url: videoURL!, play: $play)
+                    .autoReplay(true)
+                    
+                } else {
+                    
+                    VideoPlayer(url: videoURL!, play: $play)
+                    .autoReplay(true)
+                        .hidden()
+                    
+                }
+                
+                
+                
+                
                 
                 Text(scannedText.text)
                     .lineLimit(nil)
@@ -51,6 +67,10 @@ struct ContentView: View {
                             .stroke(Color(hex: "242628"), lineWidth: 5)
                     
                     )
+                    .onTapGesture {
+                            self.showVideo = false
+                    }
+                    
                     
                 }
                 
