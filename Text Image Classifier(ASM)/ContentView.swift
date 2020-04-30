@@ -22,6 +22,10 @@ struct ContentView: View {
     
     @State public var showVideo: Bool = true
     
+    @State public var showView: Bool = false
+    
+    
+    
     
     var body: some View {
         
@@ -30,6 +34,8 @@ struct ContentView: View {
             
             VStack{
                 
+                Text(scannedText.text)
+                .lineLimit(nil)
                 
                 if self.showVideo {
                     VideoPlayer(url: videoURL!, play: $play)
@@ -45,14 +51,13 @@ struct ContentView: View {
                 
                 
                 
-                
-                
-                Text(scannedText.text)
-                    .lineLimit(nil)
-                
-                Spacer()
-                
-                NavigationLink(destination: ImageCaptureView(scannedText: $scannedText.text)) {
+                Button(action: {
+                    
+                    self.showVideo = false
+                    
+                    self.showView = true
+                    
+                }) {
                     
                     Text("Scan for text")
                     .fontWeight(.bold)
@@ -67,12 +72,24 @@ struct ContentView: View {
                             .stroke(Color(hex: "242628"), lineWidth: 5)
                     
                     )
-                    .onTapGesture {
-                            self.showVideo = false
-                    }
-                    
+
                     
                 }
+                
+                
+                
+                
+                
+                
+                
+                Spacer()
+                
+                NavigationLink(destination: ImageCaptureView(scannedText: $scannedText.text), isActive: $showView) {
+                    EmptyView()
+                                        
+                    
+                }
+                
                 
                 
             }
